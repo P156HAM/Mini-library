@@ -63,7 +63,8 @@ function createBookDiscreption() {
         //const bookElement = document.createElement('section');
         //bookElement.setAttribute('class', `Book-${book.id}`)
         wrapper.innerHTML =
-            `<section class="Book-hidden__${bookId}"> </section>
+            `<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+         <section class="Book-hidden__${bookId}"> </section>
          <article class="info-section"> 
             <h2>${bookTitle}</h2>
             <h3>${bookAuthor}</h3>
