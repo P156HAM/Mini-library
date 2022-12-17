@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Quicksand:wght@400;500&family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Quicksand:wght@400;500&family=Titillium+Web:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    max-width: 1000px;
-    max-height: 1000px;
-    margin: 100px 300px 0 450px;
+    position:fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
 }
 
 .header-title {
@@ -20,22 +25,21 @@ body {
 
 .main-content {
     height: 600px;
-    width: 1000px;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 auto;
 }
 
 article {
     width: 210px;
-    height: inherit;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
-    background: linear-gradient(36deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
 }
 
 h3 {
@@ -60,12 +64,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #F2C94C;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #2F80ED;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-1 {
@@ -82,12 +89,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #F2994A;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #27AE60;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-2 {
@@ -103,12 +113,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #EB5757;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #6FCF97;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-3 {
@@ -124,12 +137,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #9B51E0;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #9B51E0;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-4 {
@@ -151,6 +167,9 @@ p{
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #56CCF2;
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-5 {
@@ -166,12 +185,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #2F80ED;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2C94C;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-6 {
@@ -187,12 +209,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #6FCF97;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2994A;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-7 {
@@ -208,12 +233,15 @@ p{
     position: relative;
     width: 200px;
     height: 240px;
-    background-color: #27AE60;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #EB5757;
     flex-basis: 21%;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: flex-end;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    cursor: pointer
 }
 
 .book-line-8 {
@@ -223,4 +251,132 @@ p{
     position: absolute;
     margin-left: 10px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 28.65%, rgba(0, 0, 0, 0.4) 67.71%, rgba(0, 0, 0, 0) 100%);
+}
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 250px 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+
+.info-section {
+    background-color: rgba(0, 0, 0, 0.9);
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 386px;
+    height: 464px;
+}
+
+.Book-hidden__1{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #2F80ED;
+}
+.Book-hidden__2{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #27AE60;
+}
+.Book-hidden__3{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #6FCF97;
+}
+.Book-hidden__4{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #9B51E0;
+}
+.Book-hidden__5{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #56CCF2;
+}
+.Book-hidden__6{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2C94C;
+}
+.Book-hidden__7{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2994A;
+}
+.Book-hidden__8{
+    width: 389.16px;
+    height: 464px;
+    background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #EB5757;
+}
+
+.info-section h2 {
+    font-family: 'Unbounded', cursive;
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44.53px;
+}
+
+.info-section h3 {
+    font-family: 'Unbounded', cursive;
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    margin-bottom: 10px;
+}
+
+.info-section aside {
+    background: rgba(196, 196, 196, 0.3);
+    border-radius: 5px;
+    width: 386px;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.info-section p {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+aside p {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    flex-basis: 45%;
+}
+
+button {
+    width: 188px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
