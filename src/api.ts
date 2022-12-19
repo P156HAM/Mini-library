@@ -13,7 +13,7 @@ async function getBooks() : Promise<Book[]> {
 
 function createElementForEveryBook(data: Book[]) {
     const mainBox: HTMLElement | null = document.querySelector('.main-content');
-    const books = data.map((book: any, index: number) => {
+    const books = data.map((book: any) => {
         const bookElement = document.createElement('section');
         bookElement.setAttribute('class', `Book-${book.id}`)
         bookElement.setAttribute('audience', `${book.audience}`)
@@ -51,7 +51,7 @@ function createBookDiscreption() {
         const bookId = section.getAttribute('data-id');
 
         const wrapper = document.createElement('div');
-        wrapper.setAttribute('class', `wrapper-Book-${bookId}`)
+        wrapper.setAttribute('class', `wrapper wrapper-Book-${bookId}`)
         wrapper.setAttribute('data-id', `data-${bookId}`)
         wrapper.classList.add('hidden')
         const bookInfoElement = document.createElement('section')
@@ -60,7 +60,11 @@ function createBookDiscreption() {
         //bookElement.setAttribute('class', `Book-${book.id}`)
         wrapper.innerHTML =
         `<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-         <section class="Book-hidden__${bookId}"> </section>
+         <section class="Book-hidden__${bookId}"> 
+            <div class="Book-hidden__line"></div>
+            <h1 class="h1-hidden">${bookTitle}</h1>
+            <h2 class="h2-hidden">${bookAuthor}</h2>
+         </section>
          <article class="info-section"> 
             <h2>${bookTitle}</h2>
             <h3>${bookAuthor}</h3>
@@ -84,6 +88,17 @@ function createBookDiscreption() {
             wrapperHidden?.classList.remove('hidden');
             wrapperHidden?.classList.add('show');
          })
+
+         const faHomeButton = document.querySelectorAll("li");
+         faHomeButton.forEach(function (button) {
+            button.addEventListener('click', () => {
+                const allWrapper = document.querySelectorAll(".wrapper");
+                allWrapper.forEach(function (wrapper) {
+                    wrapper?.classList.remove('show');
+                    wrapper?.classList.add('hidden');
+                })
+            })
+        })
     })
 }
 

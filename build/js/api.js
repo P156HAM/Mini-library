@@ -1,26 +1,15 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-function getBooks() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const baseUrl = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
-        const response = yield fetch(baseUrl);
-        const data = yield response.json();
-        console.log(data);
-        createElementForEveryBook(data);
-        createBookDiscreption();
-        return data;
-    });
+async function getBooks() {
+    const baseUrl = "https://my-json-server.typicode.com/zocom-christoffer-wallenberg/books-api/books";
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+    console.log(data);
+    createElementForEveryBook(data);
+    createBookDiscreption();
+    return data;
 }
 function createElementForEveryBook(data) {
     const mainBox = document.querySelector('.main-content');
-    const books = data.map((book, index) => {
+    const books = data.map((book) => {
         const bookElement = document.createElement('section');
         bookElement.setAttribute('class', `Book-${book.id}`);
         bookElement.setAttribute('audience', `${book.audience}`);
@@ -37,7 +26,7 @@ function createElementForEveryBook(data) {
         bookElementTitle.innerHTML =
             `<h3> ${book.title} </h3>
          <p> ${book.author} </p>`;
-        mainBox === null || mainBox === void 0 ? void 0 : mainBox.appendChild(bookElement);
+        mainBox?.appendChild(bookElement);
         bookElement.appendChild(bookLineElement);
         bookElement.appendChild(bookElementTitle);
     });
@@ -55,7 +44,7 @@ function createBookDiscreption() {
         const bookYear = section.getAttribute('year');
         const bookId = section.getAttribute('data-id');
         const wrapper = document.createElement('div');
-        wrapper.setAttribute('class', `wrapper-Book-${bookId}`);
+        wrapper.setAttribute('class', `wrapper wrapper-Book-${bookId}`);
         wrapper.setAttribute('data-id', `data-${bookId}`);
         wrapper.classList.add('hidden');
         const bookInfoElement = document.createElement('section');
@@ -64,7 +53,11 @@ function createBookDiscreption() {
         //bookElement.setAttribute('class', `Book-${book.id}`)
         wrapper.innerHTML =
             `<li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-         <section class="Book-hidden__${bookId}"> </section>
+         <section class="Book-hidden__${bookId}"> 
+            <div class="Book-hidden__line"></div>
+            <h1 class="h1-hidden">${bookTitle}</h1>
+            <h2 class="h2-hidden">${bookAuthor}</h2>
+         </section>
          <article class="info-section"> 
             <h2>${bookTitle}</h2>
             <h3>${bookAuthor}</h3>
@@ -84,8 +77,18 @@ function createBookDiscreption() {
             console.log(bookClicked);
             const wrapperHidden = document.querySelector(`.wrapper-${bookClicked}`);
             console.log(wrapperHidden);
-            wrapperHidden === null || wrapperHidden === void 0 ? void 0 : wrapperHidden.classList.remove('hidden');
-            wrapperHidden === null || wrapperHidden === void 0 ? void 0 : wrapperHidden.classList.add('show');
+            wrapperHidden?.classList.remove('hidden');
+            wrapperHidden?.classList.add('show');
+        });
+        const faHomeButton = document.querySelectorAll("li");
+        faHomeButton.forEach(function (button) {
+            button.addEventListener('click', () => {
+                const allWrapper = document.querySelectorAll(".wrapper");
+                allWrapper.forEach(function (wrapper) {
+                    wrapper?.classList.remove('show');
+                    wrapper?.classList.add('hidden');
+                });
+            });
         });
     });
 }

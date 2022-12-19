@@ -257,6 +257,7 @@ p{
 }
 
 .show {
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.9);
@@ -283,44 +284,87 @@ p{
 }
 
 .Book-hidden__1{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #2F80ED;
 }
 .Book-hidden__2{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #27AE60;
 }
 .Book-hidden__3{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #6FCF97;
 }
 .Book-hidden__4{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #9B51E0;
 }
 .Book-hidden__5{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #56CCF2;
 }
 .Book-hidden__6{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2C94C;
 }
 .Book-hidden__7{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #F2994A;
 }
 .Book-hidden__8{
+    position: relative;
     width: 389.16px;
     height: 464px;
     background: linear-gradient(208.29deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%), #EB5757;
+}
+
+.Book-hidden__line {
+    position: absolute;
+    width: 5.61px;
+    height: 464px;
+    left: 20px;
+    background-color: #171515;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 28.65%, rgba(0, 0, 0, 0.4) 67.71%, rgba(0, 0, 0, 0) 100%);
+}
+
+.h1-hidden{
+    position: absolute;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 45px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 40px;
+    top: 290px;
+}
+
+.h2-hidden{
+    position: absolute;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21.09px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 40px;
+    top: 400px;
 }
 
 .info-section h2 {
@@ -346,9 +390,10 @@ p{
     background: rgba(196, 196, 196, 0.3);
     border-radius: 5px;
     width: 386px;
-    height: 70px;
+    height: 90px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     padding: 5px;
 }
@@ -374,18 +419,22 @@ button {
     width: 188px;
     height: 48px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* go back button css down */
-
 li {
-  list-style:none;
-  margin: 0 15px;
+    position: absolute;
+    top: 160px;
+    left: 400px;
+    list-style:none;
+    margin: 0  15px;
+  
 }
 
 li a {
@@ -395,12 +444,14 @@ li a {
   height: 60px;
   text-align: center;
   line-height: 60px;
-  background: #171515;
+  background: #646262;
   border-radius: 50%;
   font-size: 30px;
-  color: #666;
+  color: rgb(16, 12, 12);
   transition: .5s;
 }
+
+
 
 li a:before {
   content: '';
