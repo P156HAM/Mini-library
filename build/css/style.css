@@ -478,3 +478,35 @@ li a:hover {
   box-shadow: 0 0 15px #d35400;
   text-shadow: 0 0 15px #d35400;
 }
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input {
+    width: 250px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+input:focus {
+    padding: 12px 0;
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
+}
+
+.search-button {
+    border: none;
+    background-color: #171515;
+    color: darkgray;
+}
+
+.error-message {
+    width: 100%;
+    text-align: center;
+}
